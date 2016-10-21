@@ -14,7 +14,7 @@ window.onload = function() {
 	parser.href = window.location.href;
 
 	var imageURL = parser.hash.substring(1);
-
+	console.log(imageURL);
 	//var imageURL = 'servo.png';
 	var imageWidth = 512;
 	var imageHeight = 512;
