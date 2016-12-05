@@ -14,8 +14,13 @@ window.onload = function() {
 	parser.href = window.location.href;
 
 	var imageURL = parser.hash.substring(1);
+
+	if(!imageURL) {
+		imageURL = 'servo.png';
+	}
+
 	console.log(imageURL);
-	//var imageURL = 'servo.png';
+
 	var imageWidth = 512;
 	var imageHeight = 512;
 	var imageCounter = 0;
@@ -88,4 +93,8 @@ window.onload = function() {
 	function setTransform(element, sx, sy, deg) {
 		element.style.transform = 'rotate(' + deg + 'deg) scale(' + sx + ', ' + sy + ')';
 	}
+};
+
+window.onpopstate = function(event) {
+  location.reload();
 };
